@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
 </head>
 <body>
 	<nav>
@@ -429,106 +428,8 @@
         </div>
       </div>
     </nav>
-
-	<div class="hero-image"
-		style="background-image: {{ heroImage }}" >
-		<div class="hero-text">Glorious Hero Text</div>
-		<div class="hero-credit">Credit: Vodkarani Codes</div>
-	</div>
-
 	<main>
 	{{ content | safe }}
 	</main>
-
-	<script>
-		var logoImgMob = document.getElementsByClassName("logo")[0];
-		var logoImgDesk = document.getElementsByClassName("logo")[1];
-		var mobileElem = document.getElementsByClassName("mobile")[0];
-		var navElem = document.getElementsByTagName("nav")[0];
-		var navBarMobElem = document.getElementsByClassName("navbar")[0];
-		var navBarDeskElem = document.getElementsByClassName("navbar")[1];
-		var hamMenuElem = document.getElementById("menu");
-		var hamIcon = document.getElementById("ham-icon");
-		var contentElem = document.getElementsByClassName("content")[0];
-		var heroImage = document.getElementsByClassName("hero-image")[0];
-		var heroSlider = document.getElementsByClassName("hero-slider")[0];
-		var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
-
-		// Global variables
-		const navbar_bg_color_solid = "rgba(248, 133, 56, 1.0)";
-		const navbar_bg_color_trans = "rgba(248, 133, 56, 0.5)";
-		const navbar_height = "100px";
-		const navbar_height_onscroll = "60px";
-		const navbar_desk_height = "120px";
-		const navbar_desk_height_onscroll = "100px";
-
-		window.addEventListener("scroll", () => {
-		let fromTop = window.scrollY;
-
-		if (fromTop > 0) {
-			logoImgMob.style.height = "40px";
-			logoImgDesk.style.height = "60px";
-			navBarMobElem.style.height = navbar_height_onscroll;
-			navBarDeskElem.style.height = navbar_desk_height_onscroll;
-			navBarDeskElem.style.backgroundColor = navbar_bg_color_solid;
-			if (contentElem) {
-			navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
-			}
-		}
-
-		if (fromTop < 1) {
-			if (!hamMenuElem.checked) {
-			logoImgMob.style.height = "80px";
-			logoImgDesk.style.height = "80px";
-			navBarMobElem.style.height = navbar_height;
-			navBarDeskElem.style.height = navbar_desk_height;
-			navBarDeskElem.style.backgroundColor = navbar_bg_color_trans;
-			if (contentElem) {
-				navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
-			}
-			}
-		}
-		});
-
-		hamMenuElem.addEventListener("click", () => {
-		if (hamMenuElem.checked) {
-			mobileElem.style.backgroundColor = navbar_bg_color_solid;
-			mobileElem.style.minHeight = "100vh";
-			if (contentElem) {
-			contentElem.style.overflow = "hidden";
-			contentElem.style.position = "fixed";
-			navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
-			}
-			logoImgMob.style.height = "40px";
-			logoImgDesk.style.height = "60px";
-			navBarMobElem.style.height = navbar_height_onscroll;
-			hamIcon.classList.toggle("ham-open");
-		} else {
-			mobileElem.style.backgroundColor = "transparent";
-			mobileElem.style.minHeight = "100%";
-			if (contentElem) {
-			contentElem.style.overflow = "auto";
-			contentElem.style.position = "static";
-			navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
-			}
-			logoImgMob.style.height = "80px";
-			logoImgDesk.style.height = "80px";
-			navBarMobElem.style.height = navbar_height;
-			hamIcon.classList.toggle("ham-open");
-		}
-		});
-
-		if (window.innerWidth > 799) {
-		if (heroImage) {
-			heroImage.style.marginTop = "-" + navbar_desk_height;
-		}
-
-		if (heroSlider) {
-			heroSlider.style.marginTop = "-" + navbar_desk_height;
-		}
-		}
-
-	</script>
-
 </body>
 </html>
