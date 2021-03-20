@@ -147,13 +147,14 @@ nav input[type="checkbox"],
 .mobile .multi-level .item > .label-plus {
   color: var(--ham-menu-item-color);
   font-weight: 400;
+  line-height: 50px;
   z-index: calc(var(--navbar-z-index) + 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   a {
     flex-grow: 2;
-    padding-left: 2em;
+    padding-left: 1.2em;
     text-decoration: none;
     color: var(--ham-menu-item-color);
   }
@@ -267,7 +268,9 @@ nav input[type="checkbox"],
     }
     a {
       color: var(--ham-menu-icon-color);
+      font-size: 16px;
       text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }

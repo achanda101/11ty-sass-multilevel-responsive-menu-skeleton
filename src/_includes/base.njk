@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-</head>
-<body>
-	<nav>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  </head>
+  <body>
+    <!-- TODO Have the full menu structure as a JSON file -->
+    <nav>
       <div class="mobile">
         <input type="checkbox" id="menu"/>
         <div class="navbar">
-          <a href="/"><img src="https://res.cloudinary.com/sangama/image/upload/v1615859999/images/sangama_logo_transbg.png" alt="" class="logo"></a>
+          <a href="/"><img src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png" alt="" class="logo"/></a>
           <label for="menu" id="ham-icon-wrapper">
             <div id="ham-icon"></div>
           </label>
@@ -20,228 +21,127 @@
         <div class="multi-level" id="ml1">
           <div class="item">
             <input type="checkbox" id="ml1-A"/>
-            <div class="label-plus">
-              <a href="/">History</a>
-              <label for="ml1-A">
-                <i class="fas fa-chevron-right"></i>
-              </label>
-            </div>
+            <label for="ml1-A">About Us<i class="fas fa-chevron-right"></i>
+            </label>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <a href="/vision/">Vision</a>
               </li>
               <li>
-                <a href="/page.html">Page</a>
+                <a href="#">Mission</a>
               </li>
               <li>
-                <a href="/page-hero.html">Page Hero</a>
+                <a href="#">Values & Ways of Working</a>
               </li>
               <li>
-                <a href="/page-pullquote.html">Page Pullquote</a>
+                <a href="#">Politics</a>
               </li>
               <li>
-                <a href="#">Web Development</a>
+                <a href="#">Board Members</a>
               </li>
               <li>
-                <a href="#">Internet Marketing & SEO</a>
+                <a href="#">Staff</a>
               </li>
             </ul>
           </div>
           <div class="item">
             <input type="checkbox" id="ml1-B"/>
-            <label for="ml1-B">Projects<i class="fas fa-chevron-right"></i>
+            <label for="ml1-B">Get Involved<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
-                <div class="sub-item">
-                  <input type="checkbox" id="ml1-B-A"/>
-                  <label for="ml1-B-A">UI/UX</label>
-                  <ul>
-                    <li>
-                      <a href="#">UI/UX Designer</a>
-                    </li>
-                    <li>
-                      <a href="#">UI Designer</a>
-                    </li>
-                    <li>
-                      <a href="#">UX Designer</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sub-item">
-                  <input type="checkbox" id="ml1-B-B"/>
-                  <label for="ml1-B-B">Development</label>
-                  <ul>
-                    <li>
-                      <a href="#">Frontend Developer</a>
-                    </li>
-                    <li>
-                      <a href="#">Backend Developer</a>
-                    </li>
-                    <li>
-                      <a href="#">Mobile App Developer</a>
-                    </li>
-                  </ul>
-                </div>
-              <li>
-                <a href="#">Graphic Design</a>
+                <a href="#">Volunteers</a>
               </li>
               <li>
-                <a href="#">Logo Design</a>
+                <a href="#">Interns</a>
               </li>
-            </li>
-          </ul>
+              <li>
+                <a href="#">Corporates</a>
+              </li>
+              <li>
+                <a href="#">Work with Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="label-plus">
+              <a href="/contact-us/">Contact Us</a>
+            </div>
+          </div>
         </div>
-        <div class="item">
-          <input type="checkbox" id="ml1-C"/>
-          <label for="ml1-C">About Us<i class="fas fa-chevron-right"></i>
-          </label>
-          <ul>
-            <li>
-              <a href="#">Our Team</a>
-            </li>
-            <li>
-              <a href="#">History</a>
-            </li>
-            <li>
-              <a href="#">Our Space</a>
-            </li>
-          </ul>
-        </div>
-        <div class="item">
-          <input type="checkbox" id="ml1-D"/>
-          <label for="ml1-D">Support<i class="fas fa-chevron-right"></i>
-          </label>
-          <ul>
-            <li>
-              <a href="#">Donate</a>
-            </li>
-            <li>
-              <a href="#">Sponsor</a>
-            </li>
-            <li>
-              <a href="#">Volunteer</a>
-            </li>
-          </ul>
-        </div>
-        <div class="item">
-          <input type="checkbox" id="ml1-E"/>
-          <label for="ml1-E">Media<i class="fas fa-chevron-right"></i>
-          </label>
-          <ul>
-            <li>
-              <a href="#">Life at our Org</a>
-            </li>
-            <li>
-              <a href="#">Media Packet</a>
-            </li>
-            <li>
-              <a href="#">Gallery</a>
-            </li>
-          </ul>
-        </div>
-        </div>
-
         <div class="multi-level" id="ml2">
           <div class="item">
+            <div class="label-plus">
+              <a href="/">focus areas</a>
+            </div>
+          </div>
+          <div class="item">
             <input type="checkbox" id="ml2-A"/>
-            <label for="ml2-A">Services ML2</label>
+            <label for="ml2-A">projects & campaigns<i class="fas fa-chevron-right"></i>
+            </label>
             <ul>
               <li>
-                <a href="#">Branding ML2</a>
+                <a href="#">Projects</a>
               </li>
               <li>
-                <a href="#">Web Development ML2</a>
-              </li>
-              <li>
-                <a href="#">Internet Marketing & SEO ML2</a>
+                <a href="#">Campaigns</a>
               </li>
             </ul>
           </div>
           <div class="item">
             <input type="checkbox" id="ml2-B"/>
-            <label for="ml2-B">Projects ML2
+            <label for="ml2-B">history & lessons learnt<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
                 <div class="sub-item">
-                  <input type="checkbox" id="ml2-B-A"/>
-                  <label for="ml2-B-A">UI/UX ML2</label>
+                  <input type="checkbox" id="ml1-D-A"/>
+                  <label for="ml1-D-A">History</label>
                   <ul>
                     <li>
-                      <a href="#">UI/UX Designer</a>
+                      <a href="#">Organisational Milestones</a>
                     </li>
                     <li>
-                      <a href="#">UI Designer</a>
+                      <a href="#">Awards & Recognitions</a>
                     </li>
                     <li>
-                      <a href="#">UX Designer</a>
+                      <a href="#">Journey of Causes</a>
+                    </li>
+                    <li>
+                      <a href="#">Donor History</a>
+                    </li>
+                    <li>
+                      <a href="#">Alliances & Partnerships</a>
                     </li>
                   </ul>
                 </div>
-                <div class="sub-item">
-                  <input type="checkbox" id="ml2-B-B"/>
-                  <label for="ml2-B-B">Development ML2</label>
-                  <ul>
-                    <li>
-                      <a href="#">Frontend Developer</a>
-                    </li>
-                    <li>
-                      <a href="#">Backend Developer</a>
-                    </li>
-                    <li>
-                      <a href="#">Mobile App Developer</a>
-                    </li>
-                  </ul>
-                </div>
-              <li>
-                <a href="#">Graphic Design ML2</a>
               </li>
               <li>
-                <a href="#">Logo Design ML2</a>
-              </li>
-            </li>
-          </ul>
-          </div>
-          <div class="item">
-            <input type="checkbox" id="ml2-C"/>
-            <label for="ml2-C">Another Darn Item ML2</label>
-            <ul>
-              <li>
-                <a href="#">Another Darn Subitem</a>
-              </li>
-              <li>
-                <a href="#">Another Darn Subitem 2</a>
-              </li>
-              <li>
-                <a href="#">Another Darn Subitem 3</a>
-              </li>
-              <li>
-                <a href="#">Another Darn Subitem 4</a>
-              </li>
-              <li>
-                <a href="#">Another Darn Subitem 5</a>
-              </li>
-              <li>
-                <a href="#">Another Darn Subitem 6</a>
-              </li>
-              <li>
-                <a href="#">Another Darn Subitem 7</a>
+                <a href="#">Lessons Learnt</a>
               </li>
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-D"/>
-            <label for="ml2-D">Community ML2</label>
+            <input type="checkbox" id="ml2-C"/>
+            <label for="ml2-C">reports & resources<i class="fas fa-chevron-right"></i>
+            </label>
             <ul>
               <li>
-                <a href="#">Outreach</a>
+                <div class="sub-item">
+                  <input type="checkbox" id="ml1-D-A"/>
+                  <label for="ml1-D-A">Reports</label>
+                  <ul>
+                    <li>
+                      <a href="#">Project Reports</a>
+                    </li>
+                    <li>
+                      <a href="#">Financial Reports</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
-                <a href="#">Support Systems</a>
-              </li>
-              <li>
-                <a href="#">CBOs</a>
+                <a href="#">Resources</a>
               </li>
             </ul>
           </div>
@@ -269,12 +169,7 @@
               </a>
             </div>
           </div>
-
           <div class="button-bar">
-            <div class="button">
-              <a href="#">Log In</a>
-            </div>
-            <div class="button">Apply for a Grant</div>
             <div class="button">
               <a href="#">Donate</a>
             </div>
@@ -283,16 +178,16 @@
       </div>
       <div class="desk">
         <div class="navbar">
-          <a href="/"><img src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png" alt="" class="logo"></a>
+          <a href="/"><img src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png" alt="" class="logo"/></a>
           <div class="menu-groups">
             <div class="multi-level" id="ml1">
               <div class="ml1-menu-section">
                 <div class="item">
                   <div class="item-name">
-                    <a href="#">About Us</a>
+                    <a href="/vision/">About Us</a>
                     <ul>
                       <li>
-                        <a href="/">Vision</a>
+                        <a href="/vision/">Vision</a>
                       </li>
                       <li>
                         <a href="/">Mission</a>
@@ -333,7 +228,7 @@
                 </div>
                 <div class="item">
                   <div class="item-name">
-                    <a href="#">Contact Us</a>
+                    <a href="/contact-us/">Contact Us</a>
                   </div>
                 </div>
               </div>
@@ -430,107 +325,101 @@
       </div>
     </nav>
 
-	<div class="hero-image"
-		style="background-image: {{ heroImage }}" >
-		<div class="hero-text">Glorious Hero Text</div>
-		<div class="hero-credit">Credit: Vodkarani Codes</div>
-	</div>
+    {{ content | safe }}
 
-	<main>
-	{{ content | safe }}
-	</main>
+    <footer>Footer</footer>
 
-	<footer>Footer</footer>
+    <script>
+      var logoImgMob = document.getElementsByClassName("logo")[0];
+      var logoImgDesk = document.getElementsByClassName("logo")[1];
+      var mobileElem = document.getElementsByClassName("mobile")[0];
+      var navElem = document.getElementsByTagName("nav")[0];
+      var navBarMobElem = document.getElementsByClassName("navbar")[0];
+      var navBarDeskElem = document.getElementsByClassName("navbar")[1];
+      var hamMenuElem = document.getElementById("menu");
+      var hamIcon = document.getElementById("ham-icon");
+      var contentElem = document.getElementsByClassName("content")[0];
+      var heroImage = document.getElementsByClassName("hero-image")[0];
+      var heroSlider = document.getElementsByClassName("hero-slider")[0];
+      var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
 
-	<script>
-		var logoImgMob = document.getElementsByClassName("logo")[0];
-		var logoImgDesk = document.getElementsByClassName("logo")[1];
-		var mobileElem = document.getElementsByClassName("mobile")[0];
-		var navElem = document.getElementsByTagName("nav")[0];
-		var navBarMobElem = document.getElementsByClassName("navbar")[0];
-		var navBarDeskElem = document.getElementsByClassName("navbar")[1];
-		var hamMenuElem = document.getElementById("menu");
-		var hamIcon = document.getElementById("ham-icon");
-		var contentElem = document.getElementsByClassName("content")[0];
-		var heroImage = document.getElementsByClassName("hero-image")[0];
-		var heroSlider = document.getElementsByClassName("hero-slider")[0];
-		var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+      // Global variables
+      const navbar_bg_color_solid = "rgba(248, 133, 56, 1.0)";
+      const navbar_bg_color_trans = "rgba(248, 133, 56, 0.5)";
+      const navbar_height = "100px";
+      const navbar_height_onscroll = "60px";
+      const navbar_desk_height = "120px";
+      const navbar_desk_height_onscroll = "100px";
 
-		// Global variables
-		const navbar_bg_color_solid = "rgba(248, 133, 56, 1.0)";
-		const navbar_bg_color_trans = "rgba(248, 133, 56, 0.5)";
-		const navbar_height = "100px";
-		const navbar_height_onscroll = "60px";
-		const navbar_desk_height = "120px";
-		const navbar_desk_height_onscroll = "100px";
+      window.addEventListener("scroll", () => {
+        let fromTop = window.scrollY;
 
-		window.addEventListener("scroll", () => {
-		let fromTop = window.scrollY;
+        if (fromTop > 0) {
+          logoImgMob.style.height = "40px";
+          logoImgDesk.style.height = "60px";
+          navBarMobElem.style.height = navbar_height_onscroll;
+          navBarDeskElem.style.height = navbar_desk_height_onscroll;
+          navBarDeskElem.style.backgroundColor = navbar_bg_color_solid;
+          if (contentElem) {
+            navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
+          }
+        }
 
-		if (fromTop > 0) {
-			logoImgMob.style.height = "40px";
-			logoImgDesk.style.height = "60px";
-			navBarMobElem.style.height = navbar_height_onscroll;
-			navBarDeskElem.style.height = navbar_desk_height_onscroll;
-			navBarDeskElem.style.backgroundColor = navbar_bg_color_solid;
-			if (contentElem) {
-			navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
-			}
-		}
+        if (fromTop < 1) {
+          if (!hamMenuElem.checked) {
+            logoImgMob.style.height = "80px";
+            logoImgDesk.style.height = "80px";
+            navBarMobElem.style.height = navbar_height;
+            navBarDeskElem.style.height = navbar_desk_height;
+            navBarDeskElem.style.backgroundColor = navbar_bg_color_trans;
+            if (contentElem) {
+              navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
+            }
+          }
+        }
+      });
 
-		if (fromTop < 1) {
-			if (!hamMenuElem.checked) {
-			logoImgMob.style.height = "80px";
-			logoImgDesk.style.height = "80px";
-			navBarMobElem.style.height = navbar_height;
-			navBarDeskElem.style.height = navbar_desk_height;
-			navBarDeskElem.style.backgroundColor = navbar_bg_color_trans;
-			if (contentElem) {
-				navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
-			}
-			}
-		}
-		});
+      hamMenuElem.addEventListener("click", () => {
+        if (hamMenuElem.checked) {
+          mobileElem.style.backgroundColor = navbar_bg_color_solid;
+          mobileElem.style.minHeight = "100vh";
+          if (contentElem) {
+            contentElem.style.overflow = "hidden";
+            contentElem.style.position = "fixed";
+            navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
+          }
+          logoImgMob.style.height = "40px";
+          logoImgDesk.style.height = "60px";
+          navBarMobElem.style.height = navbar_height_onscroll;
+          hamIcon
+            .classList
+            .toggle("ham-open");
+        } else {
+          mobileElem.style.backgroundColor = "transparent";
+          mobileElem.style.minHeight = "100%";
+          if (contentElem) {
+            contentElem.style.overflow = "auto";
+            contentElem.style.position = "static";
+            navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
+          }
+          logoImgMob.style.height = "80px";
+          logoImgDesk.style.height = "80px";
+          navBarMobElem.style.height = navbar_height;
+          hamIcon
+            .classList
+            .toggle("ham-open");
+        }
+      });
 
-		hamMenuElem.addEventListener("click", () => {
-		if (hamMenuElem.checked) {
-			mobileElem.style.backgroundColor = navbar_bg_color_solid;
-			mobileElem.style.minHeight = "100vh";
-			if (contentElem) {
-			contentElem.style.overflow = "hidden";
-			contentElem.style.position = "fixed";
-			navBarMobElem.style.backgroundColor = navbar_bg_color_solid;
-			}
-			logoImgMob.style.height = "40px";
-			logoImgDesk.style.height = "60px";
-			navBarMobElem.style.height = navbar_height_onscroll;
-			hamIcon.classList.toggle("ham-open");
-		} else {
-			mobileElem.style.backgroundColor = "transparent";
-			mobileElem.style.minHeight = "100%";
-			if (contentElem) {
-			contentElem.style.overflow = "auto";
-			contentElem.style.position = "static";
-			navBarMobElem.style.backgroundColor = navbar_bg_color_trans;
-			}
-			logoImgMob.style.height = "80px";
-			logoImgDesk.style.height = "80px";
-			navBarMobElem.style.height = navbar_height;
-			hamIcon.classList.toggle("ham-open");
-		}
-		});
+      if (window.innerWidth > 799) {
+        if (heroImage) {
+          heroImage.style.marginTop = "-" + navbar_desk_height;
+        }
 
-		if (window.innerWidth > 799) {
-		if (heroImage) {
-			heroImage.style.marginTop = "-" + navbar_desk_height;
-		}
-
-		if (heroSlider) {
-			heroSlider.style.marginTop = "-" + navbar_desk_height;
-		}
-		}
-
-	</script>
-
-</body>
+        if (heroSlider) {
+          heroSlider.style.marginTop = "-" + navbar_desk_height;
+        }
+      }
+    </script>
+  </body>
 </html>
