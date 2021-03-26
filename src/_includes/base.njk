@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
   </head>
   <body>
     <!-- TODO Have the full menu structure as a JSON file -->
     <nav>
       <div class="mobile">
-        <input type="checkbox" id="menu"/>
+        <input type="checkbox" id="menu" />
         <div class="navbar">
-          <a href="/"><img src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png" alt="" class="logo"/></a>
+          <a href="/"
+            ><img
+              src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png"
+              alt=""
+              class="logo"
+          /></a>
           <label for="menu" id="ham-icon-wrapper">
             <div id="ham-icon"></div>
           </label>
         </div>
         <div class="multi-level" id="ml1">
           <div class="item">
-            <input type="checkbox" id="ml1-A"/>
-            <label for="ml1-A">About Us<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml1-A" />
+            <label for="ml1-A"
+              >About Us<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
@@ -45,8 +57,9 @@
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml1-B"/>
-            <label for="ml1-B">Get Involved<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml1-B" />
+            <label for="ml1-B"
+              >Get Involved<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
@@ -76,8 +89,9 @@
             </div>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-A"/>
-            <label for="ml2-A">projects & campaigns<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-A" />
+            <label for="ml2-A"
+              >projects & campaigns<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
@@ -89,13 +103,14 @@
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-B"/>
-            <label for="ml2-B">history & lessons learnt<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-B" />
+            <label for="ml2-B"
+              >history & lessons learnt<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
                 <div class="sub-item">
-                  <input type="checkbox" id="ml1-D-A"/>
+                  <input type="checkbox" id="ml1-D-A" />
                   <label for="ml1-D-A">History</label>
                   <ul>
                     <li>
@@ -122,13 +137,14 @@
             </ul>
           </div>
           <div class="item">
-            <input type="checkbox" id="ml2-C"/>
-            <label for="ml2-C">reports & resources<i class="fas fa-chevron-right"></i>
+            <input type="checkbox" id="ml2-C" />
+            <label for="ml2-C"
+              >reports & resources<i class="fas fa-chevron-right"></i>
             </label>
             <ul>
               <li>
                 <div class="sub-item">
-                  <input type="checkbox" id="ml1-D-A"/>
+                  <input type="checkbox" id="ml1-D-A" />
                   <label for="ml1-D-A">Reports</label>
                   <ul>
                     <li>
@@ -178,19 +194,24 @@
       </div>
       <div class="desk">
         <div class="navbar">
-          <a href="/"><img src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png" alt="" class="logo"/></a>
+          <a href="/"
+            ><img
+              src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png"
+              alt=""
+              class="logo"
+          /></a>
           <div class="menu-groups">
             <div class="multi-level" id="ml1">
               <div class="ml1-menu-section">
                 <div class="item">
                   <div class="item-name">
-                    <a href="/vision/">About Us</a>
+                    <a href="/#vision">About Us</a>
                     <ul>
                       <li>
-                        <a href="/vision/">Vision</a>
+                        <a href="/#vision">Vision</a>
                       </li>
                       <li>
-                        <a href="/">Mission</a>
+                        <a href="/#mission">Mission</a>
                       </li>
                       <li>
                         <a href="/">Values & Ways of Working</a>
@@ -234,9 +255,7 @@
               </div>
               <div class="button-bar">
                 <div class="button round">
-                  <a href="#">
-                    DONATE
-                  </a>
+                  <a href="#"> DONATE </a>
                 </div>
               </div>
             </div>
@@ -328,7 +347,6 @@
     {{ content | safe }}
 
     <footer>Footer</footer>
-
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -341,7 +359,9 @@
       var contentElem = document.getElementsByClassName("content")[0];
       var heroImage = document.getElementsByClassName("hero-image")[0];
       var heroSlider = document.getElementsByClassName("hero-slider")[0];
-      var vanillaSlideshow = document.getElementById("vanilla-slideshow-container");
+      var vanillaSlideshow = document.getElementById(
+        "vanilla-slideshow-container"
+      );
 
       // Global variables
       const navbar_bg_color_solid = "rgba(248, 133, 56, 1.0)";
@@ -391,9 +411,7 @@
           logoImgMob.style.height = "40px";
           logoImgDesk.style.height = "60px";
           navBarMobElem.style.height = navbar_height_onscroll;
-          hamIcon
-            .classList
-            .toggle("ham-open");
+          hamIcon.classList.toggle("ham-open");
         } else {
           mobileElem.style.backgroundColor = "transparent";
           mobileElem.style.minHeight = "100%";
@@ -405,9 +423,7 @@
           logoImgMob.style.height = "80px";
           logoImgDesk.style.height = "80px";
           navBarMobElem.style.height = navbar_height;
-          hamIcon
-            .classList
-            .toggle("ham-open");
+          hamIcon.classList.toggle("ham-open");
         }
       });
 

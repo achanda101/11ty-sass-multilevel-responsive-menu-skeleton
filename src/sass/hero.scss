@@ -70,7 +70,7 @@
 @media only screen and (min-width: 800px) {
   .hero-text {
     right: 5vw;
-    bottom: 6vh;
+    bottom: 20vh;
   }
   .hero-credit {
     right: 2px;
@@ -95,15 +95,15 @@
       -moz-box-shadow: 5px -10px 4px rgba(0, 0, 0, 0.15);
     }
   }
-  .hero-item.img-1 {
+  .hero-item#img-1 {
     top: 45vh;
     left: 20vw;
   }
-  .hero-item.img-2 {
+  .hero-item#img-2 {
     top: 45vh;
     left: 45vw;
   }
-  .hero-item.img-3 {
+  .hero-item#img-3 {
     top: 45vh;
     left: 70vw;
   }
