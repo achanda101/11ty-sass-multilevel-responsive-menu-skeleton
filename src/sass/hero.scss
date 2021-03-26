@@ -11,6 +11,13 @@
   margin-bottom: 1em;
 }
 
+.hero-image.pattern {
+  background-color: #487346;
+  background-image: url("https://res.cloudinary.com/achanda/image/upload/v1616567204/green-section-wavey-bg_kotyqw.svg");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
 .hero-text {
   position: absolute;
   // top: 77vh;
@@ -46,11 +53,15 @@
   padding: 0.1em 0.5em;
 }
 
-.hero-circle-1 {
+.hero-item {
   display: none;
 }
 
-.overlay {
+.hero-item-hover {
+  display: none;
+}
+
+.hero-item-hover {
   display: none;
 }
 
@@ -65,29 +76,50 @@
     right: 2px;
     bottom: 2vh;
   }
-  .hero-circle-1 {
+  .hero-item {
     display: block;
     position: absolute;
-    top: 32vh;
-    // left: calc(18vw + min(300px, 960px) - 0.75 * min(325px, 25vw));
-    left: 60vw;
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    box-shadow: 5px -6px 4px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 5px -6px 4px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 5px -6px 4px rgba(0, 0, 0, 0.15);
     img {
-      // width: min(325px, 25vw);
-      width: 30vw;
+      width: 10vw;
+    }
+    &.round {
+      border-radius: 50%;
+      box-shadow: 5px -10px 4px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 5px -10px 4px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 5px -10px 4px rgba(0, 0, 0, 0.15);
     }
   }
-  .overlay {
+  .hero-item.img-1 {
+    top: 45vh;
+    left: 20vw;
+  }
+  .hero-item.img-2 {
+    top: 45vh;
+    left: 45vw;
+  }
+  .hero-item.img-3 {
+    top: 45vh;
+    left: 70vw;
+  }
+  .hero-item-hover {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 1;
-    transition: opacity 0.15s;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
-  .hero-circle-1:hover {
+  .hero-item:hover {
     cursor: pointer;
-    .overlay {
+    .hero-item-hover {
       opacity: 1;
     }
   }
