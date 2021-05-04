@@ -1,0 +1,12 @@
+<div id="vanilla-slideshow">
+    {% for slide in heroSlider %}
+        <div class="vanilla-slide">
+            <picture>
+                <source srcset="{{ slide[0] }}" media="(min-width: 1000px)"/>
+                <source srcset="{{ slide[1] }}" media="(min-width: 600px)"/>
+                <img src="{{ slide[2] }}" alt="slides" height="auto"/>
+            </picture>
+            <div class="home-credit">Credit: Raghuram Rajan Challapati</div>
+        </div>
+    {% endfor %}
+</div>

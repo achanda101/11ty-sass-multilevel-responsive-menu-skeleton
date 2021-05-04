@@ -1,14 +1,19 @@
 ---
 layout: base.njk
+bannerSlider: false
 ---
 
 {% if heroImage %}
 <div class="hero-image" style="background-image: {{ heroImage }}">
   <div class="hero-text">{{ heroText }}</div>
-  <div class="hero-credit">Credit: Vodkarani Codes</div>
+  <div class="hero-credit">Credit: {{ heroCredit }}</div>
 </div>
 {% endif %}
 
 <main>
   {{ content | safe }}
 </main>
+
+<script>
+  gsap.to(".hero-text", { duration: 2, y: 100 });
+</script>

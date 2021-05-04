@@ -20,10 +20,7 @@
         <input type="checkbox" id="menu" />
         <div class="navbar">
           <a href="/"
-            ><img
-              src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png"
-              alt=""
-              class="logo"
+            ><img src="{{ '/img/logo.png' | url }}" alt="" class="logo"
           /></a>
           <label for="menu" id="ham-icon-wrapper">
             <div id="ham-icon"></div>
@@ -192,10 +189,7 @@
       <div class="desk">
         <div class="navbar">
           <a href="/"
-            ><img
-              src="https://res.cloudinary.com/achanda/image/upload/v1613235426/vodkarani-codes-logo_i0rcfx.png"
-              alt=""
-              class="logo"
+            ><img src="{{ '/img/logo.png' | url }}" alt="" class="logo"
           /></a>
           <div class="menu-groups">
             <div class="multi-level" id="ml1">
@@ -444,5 +438,8 @@
         });
       });
     </script>
+    {% if bannerSlider %}
+    <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+    {% endif %}
   </body>
 </html>
