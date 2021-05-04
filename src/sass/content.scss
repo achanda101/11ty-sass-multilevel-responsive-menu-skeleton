@@ -69,31 +69,21 @@ h5 {
   position: relative;
   .img-caption {
     position: absolute;
-    bottom: -1.1em;
+    top: 100.5%;
     width: 100%;
     text-align: center;
     font-size: 0.75em;
+    line-height: 0.95em;
+    padding: 0;
   }
   .img-credit {
-    height: 100%;
     position: absolute;
-    bottom: -98%;
+    writing-mode: vertical-rl;
+    bottom: 30px;
     right: 2px;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-    /* Rotate from top right corner */
-    -webkit-transform-origin: 100% 0;
-    -moz-transform-origin: 100% 0;
-    -ms-transform-origin: 100% 0;
-    -o-transform-origin: 100% 0;
-    transform-origin: 100% 0;
     font-size: calc(7px + 0.3vw);
     color: #fff;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-    padding: 0.1em 0.5em;
   }
   .img-title {
     max-width: 75%;

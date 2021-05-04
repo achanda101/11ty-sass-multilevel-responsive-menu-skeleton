@@ -49,7 +49,7 @@
                 <a href="/page-pullquote">Page Pullquote</a>
               </li>
               <li>
-                <a href="/page#scrool">Page Anchor Smooth Scroll</a>
+                <a href="/page-no-hero/#scrool">Page Anchor Smooth Scroll</a>
               </li>
             </ul>
           </div>
@@ -340,6 +340,11 @@
     {{ content | safe }}
 
     <footer>Footer</footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -363,6 +368,8 @@
       const navbar_height_onscroll = "60px";
       const navbar_desk_height = "120px";
       const navbar_desk_height_onscroll = "100px";
+
+      window.scroll({ behavior: "smooth" });
 
       window.addEventListener("scroll", () => {
         let fromTop = window.scrollY;
@@ -429,6 +436,13 @@
           heroSlider.style.marginTop = "-" + navbar_desk_height;
         }
       }
+
+      // prevent download of images through mouse events
+      $(document).ready(function () {
+        $("img").bind("contextmenu", function (e) {
+          return false;
+        });
+      });
     </script>
   </body>
 </html>
