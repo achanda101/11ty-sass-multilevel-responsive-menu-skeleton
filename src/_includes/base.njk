@@ -335,8 +335,8 @@
 
     <footer>Footer</footer>
     <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
     <script>
@@ -440,6 +440,22 @@
     </script>
     {% if bannerSlider %}
     <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
+    <script>
+      vanillaSlideshow.init({
+        // auto slideshow, options: true or false
+        slideshow: true,
+        // slideshow delay
+        delay: 3000,
+        // display arrows, options: true or false
+        arrows: true,
+        // display indicators, options: true or false
+        indicators: false,
+        // start slideshow randomly, options: true or false
+        random: false,
+        // animation speed
+        animationSpeed: "1.75s",
+      });
+    </script>
     {% endif %}
   </body>
 </html>
