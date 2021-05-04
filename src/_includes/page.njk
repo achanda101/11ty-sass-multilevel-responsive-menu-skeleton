@@ -4,7 +4,28 @@ bannerSlider: false
 ---
 
 {% if heroImage %}
-<div class="hero-image" style="background-image: {{ heroImage }}">
+<div class="hero-image-container">
+  <div class="hero-image">
+    <picture>
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1595320104/space_desk_pf6xpx.jpg
+        "
+        media="(min-width: 1000px)"
+      />
+      <source
+        srcset="
+          https://res.cloudinary.com/nrityagram/image/upload/v1589047081/ipad/space_yvvwsu.jpg
+        "
+        media="(min-width: 600px)"
+      />
+      <img
+        src="https://res.cloudinary.com/nrityagram/image/upload/v1576171495/mobile/space_eyaqcj.jpg"
+        alt="slide 1"
+        height="auto"
+      />
+    </picture>
+  </div>
   <div class="hero-text">{{ heroText }}</div>
   <div class="hero-credit">Credit: {{ heroCredit }}</div>
 </div>
@@ -15,5 +36,5 @@ bannerSlider: false
 </main>
 
 <script>
-  gsap.to(".hero-text", { duration: 2, y: 100 });
+  gsap.to(".hero-text", { duration: 2, y: 30 });
 </script>

@@ -5,10 +5,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/img");
   eleventyConfig.addPassthroughCopy("./src/utils");
 
-  // eleventyConfig.addPlugin(lazyImagesPlugin, {
-  //   imgSelector: "img", // custom image selector
-  //   cacheFile: "", // don't cache results to a file
-  // });
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    imgSelector: "img", // custom image selector
+    cacheFile: "", // don't cache results to a file
+  });
 
   return {
     dir: {
