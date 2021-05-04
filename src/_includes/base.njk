@@ -438,7 +438,8 @@
         });
       });
     </script>
-    {% if bannerSlider %}
+
+    {% if heroType == "slider" %}
     <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
     <script>
       vanillaSlideshow.init({
