@@ -32,8 +32,8 @@ h5 {
 :target::before {
   display: block;
   content: " ";
-  margin-top: calc(var(--navbar-height) * -1);
-  height: var(--navbar-height);
+  margin-top: calc(var(--navbar-desk-height) * -1);
+  height: var(--navbar-desk-height);
   visibility: hidden;
   pointer-events: none;
 }
@@ -189,8 +189,12 @@ h5 {
   // Scroll control offset: make the anchored elements sit below the navbar
   // https://css-tricks.com/hash-tag-links-padding/
   :target::before {
-    margin-top: calc(var(--navbar-desk-height) * -1);
-    height: var(--navbar-desk-height);
+    display: block;
+    content: " ";
+    margin-top: calc(var(--navbar-height) * -1);
+    height: var(--navbar-height);
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .pullquote-layout {
