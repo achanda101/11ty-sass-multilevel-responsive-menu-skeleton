@@ -35,6 +35,8 @@ bannerSlider: false
   {{ content | safe }}
 </main>
 
+{% if heroText %}
 <script>
   gsap.to(".hero-text", { duration: 2, y: 30 });
 </script>
+{% endif %}
