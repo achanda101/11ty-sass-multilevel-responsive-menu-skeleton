@@ -25,6 +25,10 @@ img {
   pointer-events: none;
 }
 
+:focus {
+  outline: none;
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 // Desktop + Tablet
 @media only screen and (min-width: 800px) {
