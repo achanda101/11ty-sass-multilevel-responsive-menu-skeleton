@@ -6,6 +6,10 @@
     <title>{{ title }}</title>
     <link rel="preconnect" href="https://res.cloudinary.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    {% if carousels %}
+      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.carousel.min.css' | url }}"/>
+      <link rel="stylesheet" href="{{ '/utils/owl-css/owl.theme.default.min.css' | url }}"/>
+    {% endif %}
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
@@ -191,7 +195,7 @@
                         <a href="/page-hero">Page Hero</a>
                       </li>
                       <li>
-                        <a href="/page-hero-carousel">Page Hero Carousel</a>
+                        <a href="/page-hero-carousel/#samhara">Page Hero Carousel</a>
                       </li>
                       <li>
                         <a href="/page-pullquote">Page Pullquote</a>
@@ -322,9 +326,48 @@
 
     {{ content | safe }}
 
-    <footer>Footer
-      {% year %}</footer>
+    <footer>
+      <div class="tagline">
+        India's first modern Gurukul, Nrityagram is a one-of-a-kind community where dance is way of life
+      </div>
+      <div class="contact-info">
+        <p>
+          <a href="mailto:info@nrityagram.org">
+            <i class="far fa-envelope"></i>
+            info@nrityagram.org
+          </a>
+        </p>
+        <p>
+          <a href="tel:+918028466312">
+            <i class="fas fa-phone-alt"></i>
+            +91 80 28466312 / 3 / 4
+          </a>
+        </p>
+      </div>
+      <div class="address">
+        <p>address line 1</p>
+        <p>address line 2</p>
+        <p>address line 3</p>
+      </div>
+      <div class="terms-n-conditions">
+        <p>
+          <a href="#">Privacy Policy</a>
+          |
+          <a href="#">Terms & Conditions</a>
+          |
+          <a href="#">Site Credits</a>
+        </p>
+        <p>©
+          {% year %}
+          Nrityagram | All Rights Reserved</p>
+        <br>
+        <p class="light-text">Registration number 121232992897EF</p>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    {% if carousels %}
+      <script src="{{ '/utils/owl.carousel.min.js' | url }}" defer="defer"></script>
+    {% endif %}
     <script>
       var logoImgMob = document.getElementsByClassName("logo")[0];
       var logoImgDesk = document.getElementsByClassName("logo")[1];
@@ -427,6 +470,10 @@
       });
     </script>
 
+    {% if carousels %}
+      <script src="{{ '/utils/owl_custom.js' | url }}"></script>
+    {% endif %}
+
     {% if heroType == "slider" %}
       <script src="{{ '/utils/vanillaSlideshow.min.js' | url }}"></script>
       <script>
@@ -446,5 +493,6 @@
         });
       </script>
     {% endif %}
+
   </body>
 </html>
